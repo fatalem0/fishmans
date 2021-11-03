@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/main_img"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_margin="50dp"
+        android:src="@drawable/hse_logo"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <EditText
+            android:autofillHints="emailAddress"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:id="@+id/mailET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="e-mail"
+            android:background="@drawable/login_edit_text"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <EditText
+            android:autofillHints="password"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:id="@+id/passwordET"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/password_edit_text"
+            android:hint="password"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <Button
+            android:id="@+id/loginBtn"
+            style="@style/MainButton"
+            android:text="Войти"
+            android:background="@drawable/wide_button"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <Button
+            android:id="@+id/registritationBtn"
+            style="@style/MainButton"
+            android:background="@drawable/wide_button"
+            android:text="Регистрация"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
