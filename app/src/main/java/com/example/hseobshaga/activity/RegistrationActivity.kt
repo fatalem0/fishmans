@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.widget.ArrayAdapter
-import android.widget.SpinnerAdapter
 import android.widget.Toast
-import androidx.fragment.app.FragmentActivity
 import com.example.hseobshaga.R
 import com.example.hseobshaga.data.User
 import com.example.hseobshaga.databinding.ActivityRegistrationBinding
@@ -18,16 +16,12 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
-
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import java.lang.Exception
 
 
 class RegistrationActivity : AppCompatActivity() {
 
-    var data = ArrayList<String>()
+    private var data = ArrayList<String>()
     private lateinit var binding: ActivityRegistrationBinding
     private lateinit var auth: FirebaseAuth
 

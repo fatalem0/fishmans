@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
+        mAuth = FirebaseAuth.getInstance()
         setContentView(view)
     }
 
@@ -45,9 +46,9 @@ class LoginActivity : AppCompatActivity(){
     private fun loginWithEmailAndPassword(login : String, password : String){
         mAuth.signInWithEmailAndPassword(login,password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
-                //UpdateUI()
+                finish()
             } else {
                 Log.d("authcheck", "! logged", it.exception)
             }
